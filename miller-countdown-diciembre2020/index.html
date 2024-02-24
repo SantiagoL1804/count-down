@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="ad.size" content="width=320,height=480">
+		<meta name="click.through" content="cta_1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--<script type="text/javascript" src="http://ds.serving-sys.com/BurstingScript/adKit/adkit.js"></script>-->
+		<link href="assets/styles.css" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<!--<script src="assets/scripts.js"></script>-->
+	</head>
+	<body>
+	<style>
+/*	@font-face {*/
+/*    font-family: 'itau_displayxbold';*/
+/*    src: url('itaudisplay_xbd_0-webfont.woff2') format('woff2'),*/
+/*         url('itaudisplay_xbd_0-webfont.woff') format('woff');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+
+/*}*/
+/*body {*/
+/*	 font-family: 'itau_displayxbold';*/
+/*}*/
+	</style>
+	<div id="ctaButton" style="display:block; width:320px; height:480px; cursor:pointer;">
+		<script>
+			// Listen for adkit
+// 			adkit.onReady(function() {
+// 				// Load Feature
+// 				loadFeature();
+// 			});
+	
+			function loadFeature() {
+			// Establish references for buttons
+			var ctaButton = document.getElementById('ctaButton');
+			// Add Click event listener to cta button
+			ctaButton.addEventListener("click", handleCTA, false);
+			// handle click for CTA button
+			function handleCTA() {
+				// Fire Clickthrough on CTA click
+				//window.open('');
+    			//return false;
+				EB.clickthrough();
+			}
+		}
+		</script>
+	
+		<div id="ad" style="width:320px; height:480px; overflow:hidden;">
+			<div class="click" onclick="location.href='http://www.google.com'"></div>
+			<ul class="numeros">
+				<li>
+					<p id="demo1"></p>
+				</li>
+				<li>
+					<p id="demo2"></p>
+				</li>
+				<li>
+					<p id="demo3"></p>
+				</li>
+				<li>
+					<p id="demo4"></p>
+				</li>
+			</ul>
+
+			<ul class="textos">
+				<li>
+					<p class="text" style="padding-left: 0px; margin-left:50px;">Días</p>
+				</li>
+				<li>
+					<p class="text" style="padding-left: 0px; margin-left:5px;">Horas</p>
+				</li>
+				<li>
+					<p class="text" style="padding-left: 0px; margin-left:4px;">Mins</p>
+				</li>
+				<li>
+					<p class="text" style="padding-left: 0px; margin-left:12px">Secs</p>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<script>
+		var countDownDate = new Date("Jan 15, 2024 19:59:59").getTime();
+
+var x = setInterval(function () {
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo1").innerHTML = days;
+
+  document.getElementById("demo2").innerHTML = hours;
+
+  document.getElementById("demo3").innerHTML = minutes;
+
+  document.getElementById("demo4").innerHTML = seconds;
+
+  // Countdown terminado
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Expirado";
+  }
+}, 1000);
+</script>
+	</body>
+</html>

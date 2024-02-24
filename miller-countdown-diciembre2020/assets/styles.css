@@ -1,0 +1,78 @@
+
+
+html,
+body {
+	width: 320px;
+	height: 480px;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+	 font-family: 'itau_displayxbold';
+}
+
+p {
+    font-family: 'itau_displayxbold';
+    color: #fcecb1;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+li {
+    float: left;
+}
+
+li p {
+    display: block;
+    padding: 5px 5px;
+    margin: 5px;
+}
+
+.numeros {
+	margin-top: 385px;
+	margin-left: 38px;
+	
+}
+
+.textos{
+    margin-top: -10px;
+}
+
+p.text {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+p#demo1, p#demo2 {
+    background: transparent;
+    width: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+p#demo3, p#demo4 {
+    background: transparent;
+    width: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+	margin-left: 5px;
+}
+
+
+.click {
+    background: transparent;
+    width: 320px;
+    height: 480px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+}
